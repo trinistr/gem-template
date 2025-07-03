@@ -25,5 +25,5 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["{lib,sig,exe}/**/*"].select { File.file?(_1) }
   spec.bindir = "exe"
-  spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
+  spec.executables = spec.files.grep(%r{\Aexe/}) { File.basename(_1) }
 end
