@@ -1,14 +1,25 @@
-# GemTemplate
+# NAME
+> [!TIP]
+> You may be viewing documentation for an older (or newer) version of the gem.
+> Check badges below to see what the latest released version is.
+> Look at [Changelog](https://github.com/trinistr/NAME/blob/main/CHANGELOG.md)
+> to see all versions, including unreleased changes!
 
-This is a cool gem.
-REPLACE THIS DESCRIPTION.
+Latest: [![Gem Version](https://badge.fury.io/rb/NAME.svg?icon=si%3Arubygems)](https://rubygems.org/gems/NAME)
+[![CI](https://github.com/trinistr/NAME/actions/workflows/CI.yaml/badge.svg)](https://github.com/trinistr/NAME/actions/workflows/CI.yaml)
+
+***
+
+This is gem template. Do not use it as is.
+
+REPLACE THIS DESCRIPTION AND `NAME`!
 
 ## Installation
 
 Add to your application's Gemfile:
 
 ```ruby
-gem "gem-template", github: "trinistr/gem-template"
+gem "NAME", github: "trinistr/NAME"
 ```
 
 ## Usage
@@ -17,13 +28,15 @@ TODO: Write usage instructions here
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests, `rake rubocop` to lint code and check style compliance, `rake rbs` to validate signatures or just `rake` to do everything above. There is also `rake steep` to check typing, and `rake docs` to generate YARD documentation.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+You can also run `bin/console` for an interactive prompt that will allow you to experiment, or `bin/benchmark` to run a benchmark script and generate a StackProf flamegraph.
+
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, run `bundle exec rake version:{major|minor|patch}`, and then run `bundle exec rake release`, which will push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/trinistr/gem-template.
+Bug reports and pull requests are welcome on GitHub at https://github.com/trinistr/NAME.
 
 ## License
 

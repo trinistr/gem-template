@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Set up LOAD_PATH with Bundler
+require "bundler/setup"
+
+# Load supporting libraries
+require "fileutils"
+
+require "benchmark"
+require "benchmark/ips"
+require "stackprof"
+
+# Load this gem
+gem_name = File.basename(Dir["*.rb", base: "#{__dir__}/../lib"].first)
+require gem_name
+
+# Setup test data
+# ...
+
+# Run benchmark
+FileUtils.mkdir_p("tmp")
+StackProf.run(mode: :cpu, raw: true, out: "tmp/stackprof.dump") do
+  Benchmark.ips do |ips|
+    ips.report("true") { true }
+  end
+end
+
+# Generate flamegraph to actually understand StackProf's report
+`stackprof tmp/stackprof.dump --d3-flamegraph > tmp/flamegraph.html`
+puts "Flamegraph generated at tmp/flamegraph.html"
