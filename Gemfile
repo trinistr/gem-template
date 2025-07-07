@@ -15,17 +15,18 @@ group :linting do
   gem "rubocop-rake"
   gem "rubocop-rspec"
   gem "rubocop-thread_safety"
+  gem "rubocop-yard"
 
   # Checking type signatures
   gem "rbs"
+
+  # Type checking
+  gem "steep"
 end
 
 group :development do
   # Interactive console (for 3.5 compatibility)
   gem "irb" if Gem::Version.new(RUBY_VERSION) >= "3.2.0"
-
-  # Type checking
-  gem "steep"
 
   # Documentation generation
   gem "yard"
@@ -33,8 +34,13 @@ group :development do
   # Language server for development
   gem "solargraph"
 
-  # Rake tasks for version changes
+  # Automatic updates for version changes
   gem "bump"
+
+  # Benchmarking performance
+  gem "benchmark"
+  gem "benchmark-ips"
+  gem "stackprof"
 end
 
 group :test do
