@@ -26,7 +26,7 @@ end
 
 group :development do
   # Interactive console (for 3.5 compatibility)
-  gem "irb" if Gem::Version.new(RUBY_VERSION) >= "3.2.0"
+  gem "irb"
 
   # Documentation generation
   gem "yard"
