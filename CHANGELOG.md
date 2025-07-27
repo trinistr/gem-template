@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initital implementation.
 
+[Compare v0.0.0...main](https://github.com/trinistr/gem-template/compare/v0.0.0...main)
+
 ## [v0.0.0]
 
 [Next]: https://github.com/trinistr/gem-template/tree/main
