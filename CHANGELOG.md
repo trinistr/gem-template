@@ -9,5 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initital implementation.
 
+## [v0.0.0]
+
 [Next]: https://github.com/trinistr/gem-template/tree/main
 [🚀 CI]: https://github.com/trinistr/gem-template/actions/workflows/CI.yaml

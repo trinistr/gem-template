@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    gem-template (0.1.0)
+    gem_template (0.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -205,7 +205,7 @@ DEPENDENCIES
   benchmark
   benchmark-ips
   bump
-  gem-template!
+  gem_template!
   irb
   rake
   rbs
