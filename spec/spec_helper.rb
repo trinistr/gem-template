@@ -5,7 +5,7 @@ require_relative "support/coverage_helper"
 
 Dir["#{__dir__}/support/**/*.rb"].each { require _1 }
 
-require "gem-template"
+require "gem_template"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

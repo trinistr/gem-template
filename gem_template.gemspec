@@ -1,13 +1,9 @@
 # frozen_string_literal: true
 
-gem_name = File.basename(__FILE__, ".gemspec")
-require_relative "lib/#{gem_name}/version"
-
 Gem::Specification.new do |spec|
-  spec.name = gem_name
-  spec.version = GemTemplate::VERSION
+  spec.name = File.basename(__FILE__, ".gemspec")
+  spec.version = File.read("lib/#{spec.name}/version.rb")[/(?<=VERSION = ")[\d.]+/]
   spec.authors = ["Alexandr Bulancov"]
-  spec.email = ["6594487+trinistr@users.noreply.github.com"]
 
   spec.homepage = "https://github.com/trinistr/#{spec.name}"
   spec.license = "MIT"

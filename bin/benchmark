@@ -23,6 +23,7 @@ FileUtils.mkdir_p("tmp")
 StackProf.run(mode: :cpu, raw: true, out: "tmp/stackprof.dump") do
   Benchmark.ips do |ips|
     ips.report("true") { true }
+    ips.report("false") { false }
   end
 end
 
