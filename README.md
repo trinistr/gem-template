@@ -8,11 +8,16 @@
 
 ***
 
-This is **gem template**. Do not use it as is. This is **not** actually a gem.
+This is **gem template**.
 
-You can press button "Use this template" at the top-right to create a new gem repository for yourself.
+> [!IMPORTANT]
+> This is **not** actually a gem. There are released gems with similar names, but they are not related to this template in any way.
 
-Also look at rulesets to be imported into the GitHub repository (Settings > Rules > Rulesets): [Default branch protection](.github/Default branch protection.json), [Commit protection](.github/Commit protection.json) and [Tag protection](.github/Tag protection.json). These files are not needed after configuring the repository.
+You can press "Use this template" button at the top-right of the page to create a new gem repository for yourself.
+
+Also look at rulesets to be imported into the GitHub repository (Settings > Rules > Rulesets): [Default branch protection](/.github/Default%20branch%20protection.json), [Commit protection](/.github/Commit%20protection.json) and [Tag protection](/.github/Tag%20protection.json). These files are not needed after configuring the repository.
+
+After copying the template, replace "*gem-template*" with your gem name, `GemTemplate` with gem's module name, and rename "gem_template" files. Don't forget to fill **gemspec** and this **README** with your own data.
 
 ## Installation
 
