@@ -38,8 +38,11 @@ task steep: :rbs do
 end
 
 desc "Generate documentation with YARD"
-task :docs do
-  status = system "yard", "doc", ".", "--main", "README.md", "--files", "CHANGELOG.md"
+task :docs, [:output_dir] do |_task, args|
+  output_dir = args[:output_dir] || "doc"
+  # The default is to generate documentation for `lib/**/*.rb`, so we don't need to specify it.
+  # Options should generally be specified in `.yardopts`.
+  status = system "yard", "doc", "--output-dir", output_dir
   exit $CHILD_STATUS.exitstatus || 1 unless status
 end
 

@@ -11,6 +11,9 @@ Gem::Specification.new do |spec|
   spec.summary = "This is a cool gem."
   # spec.description = "TODO: Write a longer description or delete this line."
 
+  # Dependencies:
+  # spec.add_dependency "concurrent-ruby", "~> 1.2"
+
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["bug_tracker_uri"] = "#{spec.homepage}/issues"
   spec.metadata["documentation_uri"] = "https://rubydoc.info/gems/#{spec.name}/#{spec.version}"
@@ -22,4 +25,7 @@ Gem::Specification.new do |spec|
   spec.files = Dir["{lib,sig,exe}/**/*"].select { File.file?(_1) }
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { File.basename(_1) }
+
+  spec.rdoc_options = ["--main", "README.md"]
+  spec.extra_rdoc_files = ["README.md"]
 end
