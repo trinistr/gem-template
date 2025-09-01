@@ -17,7 +17,7 @@ You can press "Use this template" button at the top-right of the page to create 
 
 Also look at rulesets to be imported into the GitHub repository (Settings > Rules > Rulesets): [Default branch protection](/.github/Default%20branch%20protection.json), [Commit protection](/.github/Commit%20protection.json) and [Tag protection](/.github/Tag%20protection.json). These files are not needed after configuring the repository.
 
-After copying the template, replace "*gem-template*" with your gem name, `GemTemplate` with gem's module name, and rename "gem_template" files. Don't forget to fill **gemspec** and this **README** with your own data.
+After copying the template, replace "*gem-template*" with your gem name, `GemTemplate` with gem's module name, and rename "gem_template" files. Don't forget to fill **gemspec** and this **README** with your own data. Of course, you also *have to* change copyright notice in "*LICENSE.txt*".
 
 ## Installation
 
@@ -53,8 +53,8 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/trinis
 - Tests cover the behavior and its interactions. 100% coverage *is not enough*, as it does not guarantee that all code paths are covered.
 - Documentation is up-to-date: generate it with `rake docs` and read it.
 - `CHANGELOG.md` lists the change if it has impact on users.
-- `README.md` is updated if the feature should be visible there, including the Kanban board.
+- `README.md` is updated if the feature should be visible there.
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+This gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT), see [LICENSE.txt](https://github.com/trinistr/gem-template/blob/main/LICENSE.txt).
