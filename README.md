@@ -15,7 +15,7 @@ This is **gem template** I find useful. It is periodically updated with new feat
 > [!IMPORTANT]
 > This is **not** actually a gem. There are released gems with similar names, but they are not related to this template in any way.
 
-You can press <span style="background-color: var(--button-primary-bgColor-rest, var(--color-btn-primary-bg, #1f833d)); color: #ffffff; border-radius: 6px; padding: 3px 12px;">Use this template</span> button at the top-right ↗️ of the page to create a new gem repository for yourself.
+You can press ![Use this template](https://img.shields.io/badge/Use%20this%20template-1f833d) button at the top-right ↗️ of the page to create a new gem repository for yourself.
 
 - After copying the template, replace "*gem-template*" with your gem name, `GemTemplate` with gem's module name, and rename "gem_template" files. Change username from "trinistr" to yours too!
 - Don't forget to fill *gemspec* and this *README* with your own data. Of course, you also **have to** change copyright notice in "*LICENSE.txt*". Maybe even change the license.
