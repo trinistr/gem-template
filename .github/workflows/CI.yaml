@@ -5,18 +5,34 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "**/*.rb"
+      - "**/*.rbs"
+      - "**/*.gemspec"
+      - Gemfile*
+      - Rakefile
   pull_request:
+    paths:
+      - "**/*.rb"
+      - "**/*.rbs"
+      - "**/*.gemspec"
+      - Gemfile*
+      - Rakefile
   workflow_dispatch:
   schedule:
-  - cron: '53 4 * * TUE'
+  - cron: "13 5 * * TUE"
 jobs:
   CRuby:
     uses: ./.github/workflows/cruby.yaml
+  JRuby:
+    uses: ./.github/workflows/jruby.yaml
+  TruffleRuby:
+    uses: ./.github/workflows/truffle_ruby.yaml
   lint:
     name: Rubocop
     runs-on: ubuntu-latest
     env:
-      BUNDLE_ONLY: 'default linting'
+      BUNDLE_ONLY: "default linting"
     steps:
     - uses: actions/checkout@v5
       with:
@@ -31,7 +47,7 @@ jobs:
     name: RBS
     runs-on: ubuntu-latest
     env:
-      BUNDLE_ONLY: 'default linting'
+      BUNDLE_ONLY: "default linting"
     steps:
     - uses: actions/checkout@v5
       with:
@@ -40,6 +56,8 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         bundler-cache: true
+    - name: Install RBS collection
+      run: bundle exec rbs collection install
     - name: Run RBS
       run: bundle exec rake rbs
   coverage:
@@ -48,7 +66,7 @@ jobs:
     needs: CRuby
     runs-on: ubuntu-latest
     env:
-      BUNDLE_ONLY: 'default test'
+      BUNDLE_ONLY: "default test"
     permissions:
       pull-requests: write
     steps:
