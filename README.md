@@ -8,19 +8,19 @@
 
 ***
 
-This is **gem template**.
-
 <img src="logo.svg">
+
+This is **gem template** I find useful. It is periodically updated with new features and bug fixes.
 
 > [!IMPORTANT]
 > This is **not** actually a gem. There are released gems with similar names, but they are not related to this template in any way.
 
-You can press "Use this template" button at the top-right of the page to create a new gem repository for yourself.
+You can press <span style="background-color: var(--button-primary-bgColor-rest, var(--color-btn-primary-bg, #1f833d)); color: #ffffff; border-radius: 6px; padding: 3px 12px;">Use this template</span> button at the top-right ↗️ of the page to create a new gem repository for yourself.
 
 - After copying the template, replace "*gem-template*" with your gem name, `GemTemplate` with gem's module name, and rename "gem_template" files. Change username from "trinistr" to yours too!
-- Don't forget to fill **gemspec** and this **README** with your own data. Of course, you also *have to* change copyright notice in "*LICENSE.txt*".
+- Don't forget to fill *gemspec* and this *README* with your own data. Of course, you also **have to** change copyright notice in "*LICENSE.txt*". Maybe even change the license.
+- Make sure that [workflows](/.github/workflows) do what you want. Delete or change them as you see fit. However, removing [Zizmor workflow](/.github/workflows/zizmor.yaml) is not recommended, as it protects you against security vulnerabilities.
 - Look at rulesets to be imported into the GitHub repository (Settings > Rules > Rulesets): [Default branch protection](/.github/Default%20branch%20protection.json), [Commit protection](/.github/Commit%20protection.json) and [Tag protection](/.github/Tag%20protection.json). These files are not needed after configuring the repository.
-- Make sure that [workflows](/.github/workflows) do what you want. Delete or change them as you see fit. However, removing [Zizmor workflows](/.github/workflows/zizmor.yaml) is not recommended, as it protects you against security vulnerabilities.
 
 ## Table of contents
 
@@ -42,13 +42,13 @@ gem "gem-template", github: "trinistr/gem-template"
 
 > [!Note]
 > - Latest documentation from `main` branch is automatically deployed to [GitHub Pages](https://trinistr.github.io/gem-template).
-<!-- > - Documentation for published versions is available on [RubyDoc](https://rubydoc.info/gems/gem-template). -->
+> - Documentation for published versions is available on [RubyDoc](https://rubydoc.info/gems/gem-template).
 
 TODO: Write usage instructions here
 
 ## Development
 
-After checking out the repo, run `bundle` (or `bundle install`) to install dependencies. Then, run `rake spec` to run the tests, `rake rubocop` to lint code and check style compliance, `rake rbs` to validate signatures or just `rake` to do everything above. There is also `rake steep` to check typing, and `rake docs` to generate YARD documentation.
+After checking out the repo, run `bundle install` to install dependencies. Then, run `rake spec` to run the tests, `rake rubocop` to lint code and check style compliance, `rake rbs` to validate signatures or just `rake` to do everything above. There is also `rake steep` to check typing, and `rake docs` to generate YARD documentation.
 
 You can also run `bin/console` for an interactive prompt that will allow you to experiment, or `bin/benchmark` to run a benchmark script and generate a StackProf flamegraph.
 
@@ -62,13 +62,13 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/trinis
 
 ### Checklist for a new or updated feature
 
-- Running `rspec` reports 100% coverage (unless it's impossible to achieve in one run).
-- Running `rubocop` reports no offenses.
+- Running `rake spec` reports 100% coverage (unless it's impossible to achieve in one run).
+- Running `rake rubocop` reports no offenses.
 - Running `rake steep` reports no new warnings or errors.
-- Tests cover the behavior and its interactions. 100% coverage *is not enough*, as it does not guarantee that all code paths are covered.
+- Tests cover the behavior and its interactions. 100% coverage *is not enough*, as it does not guarantee that all code paths are tested.
 - Documentation is up-to-date: generate it with `rake docs` and read it.
-- `CHANGELOG.md` lists the change if it has impact on users.
-- `README.md` is updated if the feature should be visible there.
+- "*CHANGELOG.md*" lists the change if it has impact on users.
+- "*README.md*" is updated if the feature should be visible there.
 
 ## License
 
