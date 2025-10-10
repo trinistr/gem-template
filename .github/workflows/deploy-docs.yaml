@@ -17,7 +17,7 @@ jobs:
     if: ${{ github.repository == 'trinistr/gem-template' }}
     runs-on: ubuntu-latest
     env:
-      BUNDLE_ONLY: "default documentation"
+      BUNDLE_ONLY: "default:documentation"
     steps:
       - name: Checkout
         uses: actions/checkout@v5
