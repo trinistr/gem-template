@@ -43,7 +43,7 @@ gem "gem-template", github: "trinistr/gem-template"
 
 ## Usage
 
-> [!Note]
+> [!NOTE]
 > - Latest documentation from `main` branch is automatically deployed to [GitHub Pages](https://trinistr.github.io/gem-template).
 > - Documentation for published versions is available on [RubyDoc](https://rubydoc.info/gems/gem-template).
 
